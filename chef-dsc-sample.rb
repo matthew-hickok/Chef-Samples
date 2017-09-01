@@ -4,7 +4,15 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-['RSAT-ADDS-Tools','Hyper-V-Tools','GPMC','Web-Mgmt-Tools','Web-Mgmt-Console','Web-Ftp-Server','Print-Server'].each do |feature|
+[
+    'RSAT-ADDS-Tools',
+    'Hyper-V-Tools',
+    'GPMC',
+    'Web-Mgmt-Tools',
+    'Web-Mgmt-Console',
+    'Web-Ftp-Server',
+    'Print-Server'
+].each do |feature|
     dsc_resource 'Ensure Utility Server Components Installed' do
         resource :WindowsFeature
         property :Name, feature
